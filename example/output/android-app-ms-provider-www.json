@@ -1,0 +1,38 @@
+{
+  "consumer": {
+    "name": "android-app"
+  },
+  "provider": {
+    "name": "ms-provider-www"
+  },
+  "interactions": [
+    {
+      "description": "and when the request 'v1/customers/1' is made:",
+      "providerState": "Given the user with id '1' does not exist",
+      "request": {
+        "method": "GET",
+        "path": "/v1/customers/1"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+        },
+        "body": {
+          "error": {
+            "code": 404,
+            "message": "not found",
+            "errors": [
+              "not found"
+            ],
+            "error_code": null
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
